@@ -19,10 +19,7 @@ function updateCountdown(){
   var m = Math.floor(remain/60), s = remain%60;
   var e = document.getElementById("countdown-text");
   if(e) e.textContent = remain>0 ? m+"分"+s+"秒后完成分析" : "✅ 报告已生成";
-  if(remain<=0){
-    var ai = document.querySelectorAll(".ai-section");
-    ai.forEach(function(x){x.classList.remove("hn")});
-  }
+  if(remain<=0){}
 }
 setInterval(updateCountdown, 1000);
 // Secret: triple-click the brand name to reveal immediately
